@@ -1,0 +1,217 @@
+HTTP/1.0 400 Bad request
+Cache-Control: no-cache
+Connection: close
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subdomain Not Found - nsshohag.xyz</title>
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.1/dist/dotlottie-wc.js" type="module"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 50%, #ff8e53 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.05"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            z-index: -1;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 90%;
+            width: 600px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .container:hover {
+            transform: translateY(-5px);
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            z-index: -1;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.8em;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        h1 i {
+            font-size: 1.2em;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
+        
+        .message {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+        
+        .subdomain-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 25px 0;
+        }
+        
+        .subdomain-label {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .subdomain {
+            background: rgba(255, 255, 255, 0.25);
+            padding: 12px 25px;
+            border-radius: 12px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.2em;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .subdomain:hover {
+            background: rgba(255, 255, 255, 0.35);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .subdomain-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .subdomain-link i {
+            font-size: 0.9em;
+        }
+        
+        .animation-container {
+            margin: 30px auto;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2.2em;
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .message {
+                font-size: 1.1em;
+            }
+            
+            .subdomain {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-search"></i> Subdomain Not Found</h1>
+        <p class="message">The subdomain you're looking for doesn't exist on this server.</p>
+        
+        <div class="subdomain-container">
+            <div class="subdomain-label">Available subdomain:</div>
+            <div class="subdomain">
+                <a href="https://grafana.nsshohag.xyz" class="subdomain-link" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> grafana.nsshohag.xyz
+                </a>
+            </div>
+        </div>
+        
+        <div class="animation-container">
+            <dotlottie-wc
+                src="https://lottie.host/45e5e073-dede-4b6c-9b00-03d319762ac6/T2vve32A2d.lottie"
+                style="width: 280px; height: 280px;"
+                autoplay
+                loop>
+            </dotlottie-wc>
+        </div>
+        
+        <div class="footer">
+            <i class="fas fa-globe"></i> nsshohag.xyz
+        </div>
+    </div>
+</body>
+</html>
